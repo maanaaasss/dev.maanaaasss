@@ -13,6 +13,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://dev.maanaaasss.vercel.app"),
   title: "maanaaasss",
   description: "My personal website",
   openGraph: {
