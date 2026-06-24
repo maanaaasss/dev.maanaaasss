@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-function GitHubIcon({ size = 20 }: { size?: number }) {
+function GitHubIcon({ size = 18 }: { size?: number }) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -14,7 +14,7 @@ function GitHubIcon({ size = 20 }: { size?: number }) {
   );
 }
 
-function XIcon({ size = 20 }: { size?: number }) {
+function XIcon({ size = 18 }: { size?: number }) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -31,24 +31,24 @@ function XIcon({ size = 20 }: { size?: number }) {
 export default function Home() {
   return (
     <div className="flex flex-1 flex-col font-mono bg-[#0a0a0a] text-gray-200">
-      <main className="max-w-2xl w-full mx-auto px-3 pt-12 pb-16">
+      <main className="max-w-[600px] w-full mx-auto px-3 pt-8 pb-12">
         {/* ── Header ── */}
         <header className="flex items-center justify-between">
           <Image
             src="/avatar.jpg"
             alt="Profile photo"
-            width={40}
-            height={40}
+            width={32}
+            height={32}
             className="rounded-full object-cover"
             priority
           />
 
-          <nav className="flex items-center gap-6 text-base font-bold text-gray-400">
+          <nav className="flex items-center gap-4 text-xs font-bold text-gray-400">
             <a
               href="#"
               className="transition-colors duration-200 hover:text-gray-100"
             >
-              Projects  
+              Projects
             </a>
             <a
               href="#"
@@ -61,9 +61,9 @@ export default function Home() {
 
         {/* ── Main content ── */}
         <section>
-          <h1 className="text-2xl font-bold mt-4 mb-6">maanaaasss</h1>
+          <h1 className="text-base font-bold mt-4 mb-4">maanaaasss</h1>
 
-          <div className="space-y-6 text-gray-300 leading-relaxed">
+          <div className="space-y-4 text-xs text-gray-300 leading-relaxed">
             <p>
               Hello there, I am Manas, a fresh CSE graduate from India.
               Currently exploring different areas of software engineering that
@@ -101,9 +101,9 @@ export default function Home() {
 
         {/* ── Footer ── */}
         <footer>
-          <hr className="border-gray-600 my-8" />
+          <hr className="border-gray-800 my-6" />
 
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-3">
             <a
               href="https://github.com/maanaaasss"
               target="_blank"
@@ -111,7 +111,7 @@ export default function Home() {
               aria-label="GitHub"
               className="text-gray-100 transition-colors duration-200 hover:text-gray-400"
             >
-              <GitHubIcon size={25} />
+              <GitHubIcon size={18} />
             </a>
 
             <a
@@ -121,7 +121,7 @@ export default function Home() {
               aria-label="X (Twitter)"
               className="text-gray-100 transition-colors duration-200 hover:text-gray-400"
             >
-              <XIcon size={25} />
+              <XIcon size={18} />
             </a>
           </div>
         </footer>
