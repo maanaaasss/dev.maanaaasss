@@ -39,16 +39,26 @@ export default function Home() {
       <main className="max-w-[600px] w-full mx-auto px-3 pt-8 pb-12">
         {/* ── Header ── */}
         <header className="flex items-center justify-between">
-          <Image
-            src="/avatar.jpg"
-            alt="Profile photo"
-            width={32}
-            height={32}
-            className="rounded-full object-cover"
-            priority
-          />
+          <a
+            href="#"
+            onClick={(e) => {
+              e.preventDefault();
+              setActiveTab(null);
+            }}
+            className="cursor-pointer transition-transform duration-200 active:scale-95"
+            aria-label="Home"
+          >
+            <Image
+              src="/avatar.jpg"
+              alt="Profile photo"
+              width={32}
+              height={32}
+              className="rounded-full object-cover"
+              priority
+            />
+          </a>
 
-          <nav className="flex items-center gap-4 text-sm font-bold font-sans text-gray-400">
+          <nav className="flex items-center gap-4 text-sm font-bold font-sans">
             <a
               href="#"
               onClick={(e) => {
@@ -56,7 +66,7 @@ export default function Home() {
                 setActiveTab(activeTab === "projects" ? null : "projects");
               }}
               className={`relative pb-1 transition-colors duration-200 ${
-                activeTab === "projects" ? "text-gray-100" : "hover:text-gray-100"
+                activeTab === "projects" ? "text-gray-100" : "text-gray-400 hover:text-gray-100"
               }`}
             >
               Projects
@@ -73,7 +83,7 @@ export default function Home() {
                 setActiveTab(activeTab === "blogs" ? null : "blogs");
               }}
               className={`relative pb-1 transition-colors duration-200 ${
-                activeTab === "blogs" ? "text-gray-100" : "hover:text-gray-100"
+                activeTab === "blogs" ? "text-gray-100" : "text-gray-400 hover:text-gray-100"
               }`}
             >
               Blogs
