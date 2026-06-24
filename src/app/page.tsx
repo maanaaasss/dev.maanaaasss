@@ -71,7 +71,7 @@ export default function Home() {
             >
               Projects
               <span
-                className={`absolute bottom-0 left-0 h-[2px] w-full bg-gray-100 origin-left transition-transform duration-300 ease-out ${
+                className={`absolute bottom-0 left-0 h-px w-full bg-gray-100 origin-left transition-transform duration-300 ease-out ${
                   activeTab === "projects" ? "scale-x-100" : "scale-x-0"
                 }`}
               />
@@ -88,7 +88,7 @@ export default function Home() {
             >
               Blogs
               <span
-                className={`absolute bottom-0 left-0 h-[2px] w-full bg-gray-100 origin-left transition-transform duration-300 ease-out ${
+                className={`absolute bottom-0 left-0 h-px w-full bg-gray-100 origin-left transition-transform duration-300 ease-out ${
                   activeTab === "blogs" ? "scale-x-100" : "scale-x-0"
                 }`}
               />
