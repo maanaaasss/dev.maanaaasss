@@ -16,6 +16,20 @@ export const metadata: Metadata = {
   title: "maanaaasss — portfolio",
   description:
     "Personal portfolio of Manas — CSE graduate, builder, and learner.",
+  openGraph: {
+    images: [
+      {
+        url: "/OG.jpeg",
+        width: 1200,
+        height: 630,
+        alt: "maanaaasss — portfolio",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    images: ["/OG.jpeg"],
+  },
 };
 
 export default function RootLayout({
