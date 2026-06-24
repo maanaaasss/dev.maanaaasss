@@ -101,7 +101,7 @@ export default function Home() {
 
         {/* ── Footer ── */}
         <footer>
-          <hr className="border-gray-800 my-6" />
+          <hr className="border-t border-neutral-800 my-6" />
 
           <div className="flex items-center gap-3">
             <a
