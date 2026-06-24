@@ -43,7 +43,7 @@ export default function Home() {
             priority
           />
 
-          <nav className="flex items-center gap-4 text-sm font-bold text-gray-400">
+          <nav className="flex items-center gap-4 text-sm font-bold font-sans text-gray-400">
             <a
               href="#"
               className="transition-colors duration-200 hover:text-gray-100"
@@ -54,7 +54,7 @@ export default function Home() {
               href="#"
               className="transition-colors duration-200 hover:text-gray-100"
             >
-              Blogs
+              Blog
             </a>
           </nav>
         </header>
