@@ -43,7 +43,7 @@ export default function Home() {
             priority
           />
 
-          <nav className="flex items-center gap-4 text-xs font-bold text-gray-400">
+          <nav className="flex items-center gap-4 text-sm font-bold text-gray-400">
             <a
               href="#"
               className="transition-colors duration-200 hover:text-gray-100"
@@ -61,9 +61,9 @@ export default function Home() {
 
         {/* ── Main content ── */}
         <section>
-          <h1 className="text-base font-bold mt-4 mb-4">maanaaasss</h1>
+          <h1 className="text-lg font-bold mt-4 mb-4">Maanaaasss</h1>
 
-          <div className="space-y-4 text-xs text-gray-300 leading-relaxed">
+          <div className="space-y-4 text-sm text-gray-300 leading-relaxed">
             <p>
               Hello there, I am Manas, a fresh CSE graduate from India.
               Currently exploring different areas of software engineering that
