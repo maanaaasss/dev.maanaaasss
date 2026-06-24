@@ -96,21 +96,9 @@ export default function Home() {
           </nav>
         </header>
 
-        {/* ── Banner ── */}
-        <div className="mt-6 overflow-hidden rounded-lg border border-neutral-800 aspect-[1200/630]">
-          <Image
-            src="/OG.jpeg"
-            alt="maanaaasss banner"
-            width={600}
-            height={315}
-            className="w-full h-full object-cover"
-            priority
-          />
-        </div>
-
         {/* ── Main content ── */}
         <section>
-          <h1 className="text-lg font-bold mt-6 mb-4">maanaaasss</h1>
+          <h1 className="text-lg font-bold mt-4 mb-4">maanaaasss</h1>
 
           <div className="space-y-4 text-sm text-gray-300 leading-relaxed">
             <p>
