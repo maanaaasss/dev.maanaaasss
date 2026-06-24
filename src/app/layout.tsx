@@ -13,21 +13,24 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "maanaaasss — portfolio",
-  description:
-    "Personal portfolio of Manas — CSE graduate, builder, and learner.",
+  title: "maanaaasss",
+  description: "My personal website",
   openGraph: {
+    title: "maanaaasss",
+    description: "My personal website",
     images: [
       {
         url: "/OG.jpeg",
         width: 1200,
         height: 630,
-        alt: "maanaaasss — portfolio",
+        alt: "maanaaasss",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
+    title: "maanaaasss",
+    description: "My personal website",
     images: ["/OG.jpeg"],
   },
 };
