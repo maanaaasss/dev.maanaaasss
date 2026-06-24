@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import Image from "next/image";
+
 
 function GitHubIcon({ size = 18 }: { size?: number }) {
   return (
@@ -48,14 +48,11 @@ export default function Home() {
             className="cursor-pointer transition-transform duration-200 active:scale-95"
             aria-label="Home"
           >
-            <Image
-              src="/avatar.jpg"
-              alt="Profile photo"
-              width={32}
-              height={32}
-              className="rounded-full object-cover"
-              priority
-            />
+          <img
+            src="/avatar.jpg"
+            alt="Profile photo"
+            className="w-8 h-8 rounded-full object-cover"
+          />
           </a>
 
           <nav className="flex items-center gap-4 text-sm font-bold font-sans">
