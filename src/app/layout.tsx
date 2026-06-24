@@ -19,20 +19,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: "maanaaasss",
     description: "My personal website",
-    images: [
-      {
-        url: "/OG.jpeg",
-        width: 1200,
-        height: 630,
-        alt: "maanaaasss",
-      },
-    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "maanaaasss",
     description: "My personal website",
-    images: ["/OG.jpeg"],
   },
 };
 
