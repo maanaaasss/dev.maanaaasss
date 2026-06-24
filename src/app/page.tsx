@@ -1,3 +1,6 @@
+"use client";
+
+import { useState } from "react";
 import Image from "next/image";
 
 function GitHubIcon({ size = 18 }: { size?: number }) {
@@ -29,6 +32,8 @@ function XIcon({ size = 18 }: { size?: number }) {
 }
 
 export default function Home() {
+  const [activeTab, setActiveTab] = useState<string | null>(null);
+
   return (
     <div className="flex flex-1 flex-col font-mono bg-[#0a0a0a] text-gray-200">
       <main className="max-w-[600px] w-full mx-auto px-3 pt-8 pb-12">
@@ -46,22 +51,44 @@ export default function Home() {
           <nav className="flex items-center gap-4 text-sm font-bold font-sans text-gray-400">
             <a
               href="#"
-              className="transition-colors duration-200 hover:text-gray-100"
+              onClick={(e) => {
+                e.preventDefault();
+                setActiveTab(activeTab === "projects" ? null : "projects");
+              }}
+              className={`relative pb-1 transition-colors duration-200 ${
+                activeTab === "projects" ? "text-gray-100" : "hover:text-gray-100"
+              }`}
             >
               Projects
+              <span
+                className={`absolute bottom-0 left-0 h-[2px] w-full bg-gray-100 origin-left transition-transform duration-300 ease-out ${
+                  activeTab === "projects" ? "scale-x-100" : "scale-x-0"
+                }`}
+              />
             </a>
             <a
               href="#"
-              className="transition-colors duration-200 hover:text-gray-100"
+              onClick={(e) => {
+                e.preventDefault();
+                setActiveTab(activeTab === "blogs" ? null : "blogs");
+              }}
+              className={`relative pb-1 transition-colors duration-200 ${
+                activeTab === "blogs" ? "text-gray-100" : "hover:text-gray-100"
+              }`}
             >
-              Blog
+              Blogs
+              <span
+                className={`absolute bottom-0 left-0 h-[2px] w-full bg-gray-100 origin-left transition-transform duration-300 ease-out ${
+                  activeTab === "blogs" ? "scale-x-100" : "scale-x-0"
+                }`}
+              />
             </a>
           </nav>
         </header>
 
         {/* ── Main content ── */}
         <section>
-          <h1 className="text-lg font-bold mt-4 mb-4">Maanaaasss</h1>
+          <h1 className="text-lg font-bold mt-4 mb-4">maanaaasss</h1>
 
           <div className="space-y-4 text-sm text-gray-300 leading-relaxed">
             <p>
