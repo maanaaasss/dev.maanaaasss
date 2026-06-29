@@ -31,14 +31,32 @@ function XIcon({ size = 18 }: { size?: number }) {
   );
 }
 
+const projects = [
+  {
+    title: "Timelinx",
+    description: "A simple timeline engine for the web.",
+    link: "https://github.com/maanaaasss/timelinx",
+  },
+  {
+    title: "lofi.manaaasss",
+    description: "A beautiful and simple lofi music player.",
+    link: "https://lofi-manaaasss.vercel.app",
+  },
+  {
+    title: "Kymo",
+    description: "A simple tool to download stuff from YouTube.",
+    link: "https://kymo.vercel.app",
+  },
+];
+
 export default function Home() {
   const [activeTab, setActiveTab] = useState<string | null>(null);
 
   return (
     <div className="flex flex-1 flex-col font-mono bg-[#0a0a0a] text-gray-200">
-      <main className="max-w-[600px] w-full mx-auto px-3 pt-8 pb-12">
+      <main className="max-w-[600px] w-full mx-auto px-5 sm:px-6 pt-6 sm:pt-8 pb-10 sm:pb-12">
         {/* ── Header ── */}
-        <header className="flex items-center justify-between">
+        <header className="flex items-center justify-between mb-6 sm:mb-6">
           <a
             href="#"
             onClick={(e) => {
@@ -51,11 +69,11 @@ export default function Home() {
           <img
             src="/avatar.jpg"
             alt="Profile photo"
-            className="w-8 h-8 rounded-full object-cover"
+            className="w-9 h-9 sm:w-8 sm:h-8 rounded-full object-cover"
           />
           </a>
 
-          <nav className="flex items-center gap-4 text-sm font-bold font-sans">
+          <nav className="flex items-center gap-5 sm:gap-4 text-sm font-bold font-sans">
             <a
               href="#"
               onClick={(e) => {
@@ -94,71 +112,125 @@ export default function Home() {
         </header>
 
         {/* ── Main content ── */}
-        <section>
-          <h1 className="text-lg font-bold mt-4 mb-4">maanaaasss</h1>
-
-          <div className="space-y-4 text-sm text-gray-300 leading-relaxed">
-            <p>
-              Hello there, I am Manas, a fresh CSE graduate from India.
-              Currently exploring different areas of software engineering that
-              help me learn along the way.
+        {activeTab === "projects" ? (
+          <section>
+            <h2 className="text-base sm:text-lg font-bold mb-1 text-gray-100">Projects</h2>
+            <p className="text-[13px] text-gray-400 mb-6 leading-relaxed">
+              Just some things I've built.
             </p>
+            <div className="flex flex-col gap-3">
+              {projects.map((project) => (
+                <a
+                  key={project.title}
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group flex items-center justify-between py-2.5 px-4 bg-neutral-900/30 hover:bg-neutral-900/60 border border-neutral-800/80 hover:border-neutral-700/80 rounded-lg transition-all duration-200"
+                >
+                  <div className="flex flex-col gap-0.5">
+                    <span className="text-sm font-bold text-gray-100 group-hover:text-white transition-colors font-sans">
+                      {project.title}
+                    </span>
+                    <span className="text-[12px] font-semibold text-gray-400 group-hover:text-gray-300 transition-colors">
+                      {project.description}
+                    </span>
+                  </div>
+                  <div className="text-gray-500 group-hover:text-gray-300 transition-all duration-200 transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 shrink-0 ml-4">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="14"
+                      height="14"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    >
+                      <line x1="7" y1="17" x2="17" y2="7"></line>
+                      <polyline points="7 7 17 7 17 17"></polyline>
+                    </svg>
+                  </div>
+                </a>
+              ))}
+            </div>
+          </section>
+        ) : activeTab === "blogs" ? (
+          <section>
+            <h2 className="text-base sm:text-lg font-bold mb-4 text-gray-100">Blogs</h2>
+            <div className="text-[13px] sm:text-sm text-gray-400">
+              Writing coming soon...
+            </div>
+          </section>
+        ) : (
+          <section>
+            <h1 className="text-base sm:text-lg font-bold mb-4">maanaaasss</h1>
 
-            <p>
-              Besides programming, I also enjoy music, writing and anything that
-              teaches me a new way of looking at the world.
-            </p>
+            <div className="space-y-4 text-[13px] sm:text-sm text-gray-300 leading-relaxed">
+              <p>
+                Hello there, I am Manas, a fresh CSE graduate from India.
+                Currently exploring different areas of software engineering that
+                help me learn along the way.
+              </p>
 
-            <p>
-              Building an open-source{" "}
-              <a
-                href="https://github.com/maanaaasss/timelinx"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="underline underline-offset-4 font-semibold text-gray-100 transition-colors hover:text-gray-300"
-              >
-                timeline
-              </a>{" "}
-              library, learning{" "}
-              <a
-                href="https://www.dhrupad.info/q3/articles/fundamental-concepts-of-dhrupad.htm"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="underline underline-offset-4 font-semibold text-gray-100 transition-colors hover:text-gray-300"
-              >
-                Dhrupad
-              </a>
-              , and trying to become a little better every day.
-            </p>
-          </div>
-        </section>
+              <p>
+                Besides programming, I also enjoy music, writing and anything that
+                teaches me a new way of looking at the world.
+              </p>
+
+              <p>
+                Building an open-source{" "}
+                <a
+                  href="https://github.com/maanaaasss/timelinx"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="underline underline-offset-4 font-semibold text-gray-100 transition-colors hover:text-gray-300"
+                >
+                  timeline
+                </a>{" "}
+                library, learning{" "}
+                <a
+                  href="https://www.dhrupad.info/q3/articles/fundamental-concepts-of-dhrupad.htm"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="underline underline-offset-4 font-semibold text-gray-100 transition-colors hover:text-gray-300"
+                >
+                  Dhrupad
+                </a>
+                , and trying to become a little better every day.
+              </p>
+            </div>
+          </section>
+        )}
 
         {/* ── Footer ── */}
-        <footer>
-          <hr className="border-t border-neutral-800 my-6" />
+        {activeTab === null && (
+          <footer>
+            <hr className="border-t border-neutral-800 my-5 sm:my-6" />
 
-          <div className="flex items-center gap-3">
-            <a
-              href="https://github.com/maanaaasss"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="GitHub"
-              className="text-gray-100 transition-colors duration-200 hover:text-gray-400"
-            >
-              <GitHubIcon size={18} />
-            </a>
+            <div className="flex items-center gap-4 sm:gap-3">
+              <a
+                href="https://github.com/maanaaasss"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="GitHub"
+                className="text-gray-100 transition-colors duration-200 hover:text-gray-400 p-1 -m-1"
+              >
+                <GitHubIcon size={20} />
+              </a>
 
-            <a
-              href="https://x.com/manaaaassss"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="X (Twitter)"
-              className="text-gray-100 transition-colors duration-200 hover:text-gray-400"
-            >
-              <XIcon size={18} />
-            </a>
-          </div>
-        </footer>
+              <a
+                href="https://x.com/manaaaassss"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="X (Twitter)"
+                className="text-gray-100 transition-colors duration-200 hover:text-gray-400 p-1 -m-1"
+              >
+                <XIcon size={20} />
+              </a>
+            </div>
+          </footer>
+        )}
       </main>
     </div>
   );
